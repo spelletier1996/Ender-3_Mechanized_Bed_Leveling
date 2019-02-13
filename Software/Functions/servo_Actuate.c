@@ -10,5 +10,6 @@ Void level_Corner(servo current_Servo, float correction) { //Function to control
       correction_Angle = 360 * (correction / lead_Distance); //calculating angle to rotate the servo
 
       current_Servo.write(correction_Angle) //Sending command to the arduino
+cout<<"Hello.";
 
 }
