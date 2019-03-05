@@ -1,4 +1,5 @@
 #include<serial_Gcode.h>
+#include<continuous_Servo.h>
 #include<Arduino.h>
 
 
@@ -24,11 +25,7 @@ void serial_Gcode::wait_For_ok(){ //function that waits for marlin to return ok 
 
 }
 
-
-
 void serial_Gcode::moveto_FL(){ //sends gcode to move printer to front left then waits for ok
-
-
 
   Serial.print("G0 X40 Y10 Z5");
   wait_For_ok();
@@ -56,6 +53,19 @@ void serial_Gcode::moveto_BR(){ //sends gcode to move printer to back right then
 void serial_Gcode::auto_Home(){ //sends gcode to move printer to auto home then waits for ok
 
   Serial.write("G28");
+  wait_For_ok();
+
+}
+
+void serial_Gcode::increment_Up(){ //increments the printer up 1mm
+
+  Serial.write("G91 Z1");
+  wait_For_ok();
+
+}
+void serial_Gcode::increment_Down(){ //increments the printer down 1mm
+
+  Serial.write("G91 Z-1");
   wait_For_ok();
 
 }
