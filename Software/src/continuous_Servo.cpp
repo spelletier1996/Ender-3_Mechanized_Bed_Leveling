@@ -4,7 +4,7 @@ void continuous_Servo::setup( int pin, int orientation, int offset ){
 
   attach(pin);
 
-  this->orientation = orientation;
+  this->orientation = orientation; // either a 1 or 0 value
 
   stop_Value = 90 + offset;
 
@@ -25,7 +25,7 @@ void continuous_Servo::lower(){
 
 };
 void continuous_Servo::stop(){
-  
+
   write(stop_Value);
 
 };
