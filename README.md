@@ -1,5 +1,6 @@
 # Ender-3_Mechanized_Bed_Leveling
 This is an implementation of a mechanical leveling system on the Creality Ender-3 Printer. 
+![alt text](https://i.imgur.com/5lPmSWH.jpg)
 ## Mechanical Structure
 The structure on the mechanical side is essentially complete except for a few tolerance teaks. 
 ## Software
